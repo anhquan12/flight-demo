@@ -1,0 +1,26 @@
+<div class="auth-container">
+  <h2> Airport Flight</h2>
+  <!--<button class="btn btn-danger" (click)="addUser()"> Add User</button>-->
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <!--<th>Id</th>-->
+      <th>AirportCode</th>
+      <th>AirportName</th>
+      <th>AirportLocation</th>
+      <th>OtherDetails</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let air of airports">
+      <td>{{air.airportCode}}</td>
+      <td>{{air.airportName}}</td>
+      <td>{{air.airportLocation}}</td>
+      <td>{{air.otherDetails}}</td>
+      <td><button class="btn btn-danger" (click)="deleteAirport(air)"> Delete</button>
+        <button class="btn btn-danger" (click)="editAirport(air)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
